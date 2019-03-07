@@ -1,12 +1,9 @@
-/node_modules
-/npm-debug.log
 .DS_Store
-/dist
-/_dev
-/coverage
-
-# Additional bundles
-/devtools.js
-/devtools.js.map
-/debug.js
-/debug.js.map
+node_modules
+npm-debug.log
+dist
+package-lock.json
+.vscode
+.idea
+test/ts/**/*.js
+coverage

@@ -1,24 +1,26 @@
 {
 	"compilerOptions": {
-		"module": "commonjs",
+		"target": "es6",
+		"module": "es6",
+		"moduleResolution": "node",
 		"lib": [
 			"es6",
 			"dom"
 		],
 		"noImplicitAny": true,
 		"noImplicitThis": true,
-		"strictNullChecks": false,
+		"strictNullChecks": true,
+		"strict": true,
 		"typeRoots": [
 			"../../"
 		],
 		"types": [],
-		"noEmit": true,
 		"forceConsistentCasingInFileNames": true,
 		"jsx": "react",
-		"jsxFactory": "h"
+		"jsxFactory": "createElement"
 	},
-	"files": [
-		"prect-test.tsx",
-		"../../src/preact.d.ts"
+	"include": [
+		"./**/*.ts",
+		"./**/*.tsx"
 	]
 }

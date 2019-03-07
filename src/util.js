@@ -1,13 +1,11 @@
-/** Copy own-properties from `props` onto `obj`.
- *	@returns obj
- *	@private
+/**
+ * Assign properties from `props` to `obj`
+ * @template O, P The obj and props types
+ * @param {O} obj The object to copy properties to
+ * @param {P} props The object to copy properties from
+ * @returns {O & P}
  */
-export function extend(obj, props) {
+export function assign(obj, props) {
 	for (let i in props) obj[i] = props[i];
-	return obj;
+	return /** @type {O & P} */ (obj);
 }
-
-/** Call a function asynchronously, as soon as possible.
- *	@param {Function} callback
- */
-export const defer = typeof Promise=='function' ? Promise.resolve().then.bind(Promise.resolve()) : setTimeout;
